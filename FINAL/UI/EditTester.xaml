@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp1.EditTester"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="EditTester" Height="576" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="AddTesterlabel" Content="Add or Update Tester" FontSize="30" Margin="0,0,0.333,0"/>
+        <Grid x:Name="gridAddTester" Grid.Row="1" VerticalAlignment="Top" Height="314" Margin="0,0,-1,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="118.8"/>
+                <ColumnDefinition Width="Auto" MinWidth="127.6"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="329"/>
+            </Grid.RowDefinitions>
+            <Label Content="Tester Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,0,0,304" Grid.Row="0" VerticalAlignment="Center" Height="26" Width="107"/>
+            <TextBox x:Name="TesterIDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="32,0,0,304" Grid.Row="0" Text="{Binding TesterID, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="first name:" Grid.Column="0" HorizontalAlignment="Left" Margin="0,31,0,273" VerticalAlignment="Center" Height="26" Width="107"/>
+            <TextBox x:Name="TesterfirstTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="32,31,0,273" Text="{Binding TesterName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="last name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,62,0,242" VerticalAlignment="Center" Height="26" Width="107"/>
+            <TextBox x:Name="TesterLastTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="32,62,0,242" VerticalAlignment="Center" Width="120"/>
+            <ComboBox x:Name="TesterGendercomboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="31,93,0,0" VerticalAlignment="Top" Width="120" Height="26">
+                <ComboBoxItem Content="male"></ComboBoxItem>
+                <ComboBoxItem Content="female"></ComboBoxItem>
+                <ComboBoxItem Content="other"></ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="TesterPhoneNumbertextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="31,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TesterAdresstextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="32,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TesterCarModeltextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="31,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label" Content="Gender:" HorizontalAlignment="Left" Margin="3,93,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
+            <Label x:Name="label1" Content="Phone Number:" HorizontalAlignment="Left" Margin="3,124,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
+            <Label x:Name="label2" Content="Adress" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,155,0,0" Height="26" Width="107"/>
+            <Label x:Name="label3" Content="Birth Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,186,0,0" Height="26" Width="107"/>
+            <Label x:Name="label4" Content="Car model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,217,0,0" Height="26" Width="107"/>
+            <Label x:Name="label5" Content="Years of exp." HorizontalAlignment="Left" Margin="3,248,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
+            <Label x:Name="label6" Content="Tests per week" HorizontalAlignment="Left" Margin="3,279,0,0" VerticalAlignment="Top" Width="107"/>
+            <TextBox x:Name="TesterYearsOfExptextBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="32,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="TesterTestsPerWeek" Grid.Column="1" HorizontalAlignment="Left" Margin="31,279,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+            <DatePicker x:Name="TesterBirthday" Grid.Column="1" HorizontalAlignment="Left" Margin="32,186,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        </Grid>
+        <Button x:Name="Update" Content="Update" HorizontalAlignment="Left" Margin="10,397,0,0" Grid.Row="1" VerticalAlignment="Top" Width="133" Height="44" FontSize="30" Click="Update_Click"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Margin="148,397,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Height="44" FontSize="30" Click="Delete_Click"/>
+        <Button x:Name="Add" Content="Add" FontSize="30" Grid.Row="1" Margin="10,446,10,10.5" Click="Add_Click"/>
+    </Grid>
+</Window>
